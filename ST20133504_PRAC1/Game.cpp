@@ -102,8 +102,8 @@ void Game::setup()
 }
 
 
-
-void Game::setupCamera()
+ 
+ void Game::setupCamera()
 {
     // Create Camera
     Camera* cam = scnMgr->createCamera("myCam");
@@ -124,7 +124,7 @@ void Game::setupCamera()
 
     // link the camera and view port.
     cam->setAspectRatio(Real(vp->getActualWidth()) / Real(vp->getActualHeight()));
-}
+} 
 
 void Game::bulletInit()
 {
@@ -423,7 +423,7 @@ void Game::setupFloor()
     dynamicsWorld->addRigidBody(body);
 }
 
-bool Game::frameStarted(const Ogre::FrameEvent& evt)
+ bool Game::frameStarted(const Ogre::FrameEvent& evt)
 {
     //Be sure to call base class - otherwise events are not polled.
     ApplicationContext::frameStarted(evt);

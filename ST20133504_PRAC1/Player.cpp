@@ -221,3 +221,34 @@ void Player::spinRight()
 
     }
 }
+
+/*
+void Player::spinLeft()
+{
+    //Apply a turning force to the front of the body.
+    //this is an axis (around which to turn)
+    //lenght of the vector is the magnitue of the torque.
+    btVector3 left(0.0f, 100.0f, 0.0f);
+    btVector3 turn;
+
+    btTransform trans;
+
+    if (body && body->getMotionState())
+    {
+        //again get the orientation of the body.
+        body->getMotionState()->getWorldTransform(trans);
+        btQuaternion orientation = trans.getRotation();
+
+        //orientated the local force into world space.
+        turn = quatRotate(orientation, left);
+
+        //activate the body, this is essential if the body
+        //has gone to sleep (i.e. stopped moving/colliding).
+        body->activate();
+
+        body->applyTorque(left);
+
+    }
+}
+
+*/
