@@ -14,7 +14,7 @@ Manual generation of meshes from here:
 #include "Game.h"
 
 
-Game::Game() : ApplicationContext("OgreTutorialApp")
+Game::Game() : ApplicationContext("ST20133504_PRAC1")
 {
     dynamicsWorld = NULL;
 
@@ -559,7 +559,42 @@ void Game::setupLights()
 
 }
 
-bool Game::keyPressed(const KeyboardEvent& evt)
+/* Attempted to add working WASD movemement for the player placeholder -- met with multiple errors was unable to fix
+int main()
+{
+    char ch=0;
+    cout << "Press Q to quit\n";
+    do
+    {
+        ch = getch();
+
+        switch(ch)
+        {
+            case 'W':
+            case 'w':
+                cout << "W was pressed \n";
+                break;
+            case 'A':
+            case 'a':
+                cout << "A was pressed \n";
+                break;
+            case 's':
+            case 'S':
+                cout << "S was pressed \n";
+                break;
+            case 'D':
+            case 'd':
+                cout << "D was pressed \n";
+                break;
+
+        }
+
+    }while (ch != 'Q' && ch!='q');
+}
+*/
+
+ //  Current Player Movement for Player Placeholder // 
+bool Game::keyPressed(const KeyboardEvent& evt) 
 {
     std::cout << "Got key down event" << std::endl;
     if (evt.keysym.sym == SDLK_ESCAPE)
@@ -578,7 +613,7 @@ bool Game::keyPressed(const KeyboardEvent& evt)
     }
 
     return true;
-}
+  } 
 
 bool Game::keyReleased(const KeyboardEvent& evt)
 {

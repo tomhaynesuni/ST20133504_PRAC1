@@ -131,7 +131,7 @@ void Player::update()
     }
 }
 
-void Player::forward()
+ void Player::forward()
 {
     //Create a vector in local coordinates
     //pointing down z.
@@ -157,7 +157,7 @@ void Player::forward()
         //apply a force to the center of the body
         body->applyCentralForce(push);
     }
-}
+} 
 
 void Player::turnRight()
 {
